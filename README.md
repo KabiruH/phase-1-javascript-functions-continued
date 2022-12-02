@@ -39,7 +39,26 @@ The word `razzle` becomes a _pointer_ to some stored, potential,
 not-yet-actually-run bit of work (the function). We use the _pointer_ to _call_
 or _invoke_ the function. We _call_ the function by adding `()` after the
 _pointer_.
+function saturdayFun(activity = 'roller-skate') {
+    return(`This Saturday, I want to ${activity}!`);
+      }
+    saturdayFun();
+    saturdayFun('roller-skate');
 
+function mondayWork(activity = 'go to the office'){
+    return(`This Monday, I will ${activity}.`);
+        }
+    mondayWork('work from home.');
+
+
+    function wrapAdjective(wrapper = "*") {
+        function emphatic(string = "a hard worker") {
+        return `You are ${wrapper}${string}${wrapper}!`;
+            };
+        return emphatic;
+          };
+        let result = wrapAdjective("||");
+        result("a dedicated programmer")
 ```js
 function razzle() {
   console.log("You've been razzled!");
